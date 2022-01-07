@@ -30,6 +30,7 @@ for i = 1:length(axS)
     set(axcp, 'position', get(axSP(i), 'position'));
     delete(axSP(i)); 
 end
+delete(axSP(length(axS)+1:sum(subplotDim))); % delete unused axes
 
 end
 
