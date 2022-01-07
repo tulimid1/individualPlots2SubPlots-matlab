@@ -4,86 +4,113 @@ title: MATLAB
 permalink: /MATLAB/
 ---
 
-# [function](https://function_link.com) 
+# [individPlots2SubPlots](https://github.com/tulimid1/individualPlots2SubPlots-matlab/blob/main/individPlots2SubPlots.m) 
 ---
 
-Description. See [function_main.mlx](https://function_main.mlx) for a notebook of given examples. 
+Take individual figures and put them together into one figure with multiple subplot. See [function_main.mlx](https://www.mathworks.com/matlabcentral/fileexchange/104710-individualplots2subplots-matlab) for a notebook of given examples. 
 
 ## Syntax
 ---
-[outarg = function(inarg1, inarg2)](#a)
-
-[outarg = function(inarg1, inarg2, Name, Value)](#b)
+[individPlots2SubPlots(axS, subplotDim)](#a)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
-
-### B
-[outarg](#outarg) = function([inarg1](#inarg1), [inarg2](#inarg2), [Name, Value)](#name-value-arguments) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+individPlots2SubPlots([axS](#axS), [subplotDim](#subplotDim)) returns one figure with subplots of dimesion [subplotDim](#subplotDim) that contains axes defined in [axS](#axS). [example](#example-1)
 
 ## Examples 
 ---
 ### Example 1
-Description
+Generate four figures and put their contents into one figure with a 2x2 subplot layout. 
 
-    CODE
+    % generate some data 
+    x = linspace(0, 2*pi, 500);
+
+    figure();
+    ax(1) = gca(); 
+    plot(x, sin(x), 'linewidth', 2)
+    set(ax(1),'fontsize', 16);
+
+![](fig1.png)
     
-![fig1](/assets/fig1M.png)
+    figure();
+    ax(2) = gca(); 
+    plot(x, cos(x), 'linewidth', 2)
+    set(ax(2), 'fontsize', 16);
+    
+![](fig2.png)
+    
+    figure();
+    ax(3) = gca(); 
+    scatter(x, x, 25)
+    set(ax(3), 'fontsize', 16)
+    
+![](fig3.png)
+    
+    figure();
+    ax(4) = gca(); 
+    plot(x, tan(x), 'linewidth', 2)
+    set(ax(4), 'fontsize', 16)
+
+![](fig4.png)
+
+    individPlots2SubPlots(ax, [2,2])
+    
+![fig1](ex1.png)
     
 ### Example 2
-Description
+Generate four figures and put their contents into one figure with a 3x3 subplot layout. 
 
-    CODE
+    % generate some data 
+    x = linspace(0, 2*pi, 500);
+
+    figure();
+    ax(1) = gca(); 
+    plot(x, sin(x), 'linewidth', 2)
+    set(ax(1),'fontsize', 16);
+
+![](fig1.png)
     
-![fig2](/assets/fig2M.png)
+    figure();
+    ax(2) = gca(); 
+    plot(x, cos(x), 'linewidth', 2)
+    set(ax(2), 'fontsize', 16);
+    
+![](fig2.png)
+    
+    figure();
+    ax(3) = gca(); 
+    scatter(x, x, 25)
+    set(ax(3), 'fontsize', 16)
+    
+![](fig3.png)
+    
+    figure();
+    ax(4) = gca(); 
+    plot(x, tan(x), 'linewidth', 2)
+    set(ax(4), 'fontsize', 16)
+
+![](fig4.png)
+
+    individPlots2SubPlots(ax, [3,3])
+    
+![fig2](ex2.png)
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```axS```
+Vector of axes handles
 
-Long description
+1D vector that contains all axis handles to be plotted together. 
 
-Data Types: (X, Y)
+Data Types: (vector, axes handles)
 
-### ```inarg2```
-Short description
+### ```subplotDim```
+Subplot dimensions for final figure
 
-Long description
+Subplot layout for output figure. 
 
-Data Types: (X, Y)
-
-### Name-Value Arguments
-
-Specified optional comma-separated pairs of ```Name,Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. ```Name``` musta ppear inside single or double quotes. You can specify several name and value pair arguments in any order as ```Name1,Value1,...,NameN,ValueN```. 
-
-**Example**: ```'name1', value1, 'name2', value2``` specifies blah blah blah.
-
-### ```name1```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
-
-## Output
----
-
-## ```outarg```
-Short description
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (vector, numeric)
 
 ## More About 
 ---
@@ -91,13 +118,11 @@ Data Types: (X, Y)
 ## Tips 
 ---
 
-I would suggest adding both `function.m` and `functionSignatures.json` to a folder that is in your MATLAB path. The `function.m` contains the function and the `functionSignatures.json` will you give custom suggestions and code completion for when you call `function` in a script or notebook. 
-
-If you already have a `functionSignatures.json` file in your folder, just add the pertinent code to the original `functionSignatures.json`. 
+This is all this function does (a good function does 1 thing and 1 thing only). You can get the figure and axis after and edit the properties. 
 
 ## Issues and Discussion
 ---
 
-[Issues](https://github.com/tulimid1/TASK/issues) and [Discussion](https://github.com/tulimid1/TASK/discussions).
+[Issues](https://github.com/tulimid1/individualPlots2SubPlots-matlab/issues) and [Discussion](https://github.com/tulimid1/individualPlots2SubPlots-matlab/discussions).
 
 If you don't know how to use github (or don't want to), just send me an [email](mailto:tulimid@udel.edu). 
