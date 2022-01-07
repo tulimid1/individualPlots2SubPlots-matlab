@@ -1,0 +1,26 @@
+function individPlots2SubPlots(figure_handles, subplotDim)
+%{
+Take individual figures and put them to onto subplots. 
+
+INPUTS:
+figure_handles: figure handles [N x 1]
+subplotDim: subplot dimensions [1 x 2]
+
+OUTPUT:
+Figure with graphs from figure handles in one figure that has subplots with
+given dimensions
+
+%}
+
+figure();
+for i = 1:sum(subplotDim)
+    axSP(i) = subplot(subplotD,i, 'parent', gcf());
+end
+for i = 1:4
+    axcp = copyobj(ax(i), gcf());
+    set(axcp, 'position', get(axSP(i), 'position'));
+    delete(axSP(i)); 
+end
+
+end
+
