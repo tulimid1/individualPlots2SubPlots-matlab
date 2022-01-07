@@ -16,7 +16,7 @@ Take individual figures and put them together into one figure with multiple subp
 ## Description
 ---
 ### A
-individPlots2SubPlots([axS](#axS), [subplotDim](#subplotDim)) returns one figure with subplots of dimesion [subplotDim](#subplotDim) that contains axes defined in [axS](#axS). [example](#example-1)
+individPlots2SubPlots([axS](#axs), [subplotDim](#subplotdim)) returns one figure with subplots of dimesion [subplotDim](#subplotDim) that contains axes defined in [axS](#axS). [example](#example-1)
 
 ## Examples 
 ---
