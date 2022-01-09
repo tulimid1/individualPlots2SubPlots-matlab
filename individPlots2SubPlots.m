@@ -22,7 +22,7 @@ end
 
 f = figure();
 axSP = gobjects(size(axS)); 
-for i = 1:sum(subplotDim)
+for i = 1:subplotDim(1)*subplotDim(2)
     axSP(i) = subplot(subplotDim(1), subplotDim(2), i, 'parent', f);
 end
 for i = 1:length(axS)
@@ -30,7 +30,9 @@ for i = 1:length(axS)
     set(axcp, 'position', get(axSP(i), 'position'));
     delete(axSP(i)); 
 end
-delete(axSP(length(axS)+1:sum(subplotDim))); % delete unused axes
+if length(axS) < subplotDim(1) * subplotDim(2)
+    delete(axSP(length(axS)+1:sum(subplotDim))); % delete unused axes
+end
 
 end
 
