@@ -7,7 +7,7 @@ permalink: /MATLAB/
 # [individPlots2SubPlots](https://github.com/tulimid1/individualPlots2SubPlots-matlab/blob/main/individPlots2SubPlots.m) 
 ---
 
-Take individual figures and put them together into one figure with multiple subplot. See [function_main.mlx](https://www.mathworks.com/matlabcentral/fileexchange/104710-individualplots2subplots-matlab) for a notebook of given examples. 
+Take individual figures and put them together into one figure with multiple subplot. See [iP2SP_examples.mlx](https://www.mathworks.com/matlabcentral/fileexchange/104710-individualplots2subplots-matlab) for a notebook of given examples. 
 
 ## Syntax
 ---
